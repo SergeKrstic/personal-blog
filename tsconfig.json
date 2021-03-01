@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "target": "es2018",
+    "module": "commonjs",
+    "sourceMap": true,
+    "lib": [
+      "dom",
+      "es2017"
+    ],
+    "allowJs": true,
+    "checkJs": true,
+    "jsx": "react",
+    "strict": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noEmit": true,
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "./node_modules",
+    "./public",
+    "./.cache"
+  ],
+  "include": [
+    "./src/**/*"
+  ],
+}

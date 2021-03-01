@@ -5,7 +5,22 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const BlogPostTemplate = ({ data, location }) => {
+interface Props {
+  data: {
+    markdownRemark: any
+    next: any
+    previous: any
+    site: {
+      siteMetadata: {
+        title: string
+      }
+    }
+  }
+  pageContext: any
+  location: any
+}
+
+const BlogPostTemplate = ({ data, location }: Props) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
