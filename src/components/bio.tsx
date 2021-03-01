@@ -37,11 +37,11 @@ const Bio = () => {
   const author = data.site.siteMetadata?.author
   const social = data.site.siteMetadata?.social
 
-  const avatar = data?.avatar?.childImageSharp?.fixed
+  // const avatar = data?.avatar?.childImageSharp?.fixed
 
   return (
     <div className="bio">
-      {avatar && (
+      {/* {avatar && (
         <Image
           fixed={avatar}
           alt={author?.name || ``}
@@ -50,7 +50,7 @@ const Bio = () => {
             borderRadius: `50%`,
           }}
         />
-      )}
+      )} */}
       {author?.name && (
         <p>
           Written by <strong>{author.name}</strong> {author?.summary || null}
