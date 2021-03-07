@@ -27,15 +27,16 @@ const Bio = () => {
   `)
 
   // Set these values by editing "siteMetadata" in gatsby-config.js
-  const author = data.site.siteMetadata?.author
-  const social = data.site.siteMetadata?.social
+  const { author, social } = data.site.siteMetadata
+  // const author = data.site.siteMetadata?.author
+  // const social = data.site.siteMetadata?.social
 
   return (
     <div className="bio">
       <StaticImage
         className="bio-avatar"
         layout="fixed"
-        formats={["AUTO", "WEBP", "AVIF"]}
+        formats={["auto", "webp", "avif"]}
         src="../../content/assets/profile-pic.jpg"
         width={50}
         height={50}
