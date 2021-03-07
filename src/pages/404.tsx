@@ -1,10 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/Layout"
+import SEO from "../components/Seo"
 
-interface Props {
+export interface NotFoundPageProps {
   data: {
     site: {
       siteMetadata: {
@@ -15,7 +15,7 @@ interface Props {
   location: any
 }
 
-const NotFoundPage = ({ data, location }: Props) => {
+const NotFoundPage = ({ data, location }: NotFoundPageProps) => {
   const siteTitle = data.site.siteMetadata.title
 
   return (
