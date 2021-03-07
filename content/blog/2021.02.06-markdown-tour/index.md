@@ -4,6 +4,18 @@ date: '2021-02-06T22:15:43.284Z'
 description: 'Markdown is easy to learn. Let me show you how...'
 ---
 
+-   Introduction
+    Markdown features
+-   Italics and Bold
+-   Headers
+-   Links
+-   Images
+-   Blockquotes
+-   Lists
+-   Paragraphs
+
+-   Congratulations!
+
 This is my first post on my new fake blog! How exciting!
 
 I'm sure I'll write a lot more interesting things in the future.
