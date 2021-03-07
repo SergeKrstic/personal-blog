@@ -1,5 +1,6 @@
 module.exports = {
-  semi: true,
+  // arrowParens: "avoid",
+  semi: true, // default: false
   trailingComma: "all",
   singleQuote: true,
   printWidth: 120,
