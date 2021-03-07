@@ -1,5 +1,8 @@
 import { action } from "@storybook/addon-actions"
 
+import '../src/normalize.css';
+import '../src/style.css';
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
 }
