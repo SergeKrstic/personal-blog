@@ -5,6 +5,8 @@ import Bio from "../components/Bio"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 
+import "katex/dist/katex.min.css"
+
 interface Props {
   data: {
     markdownRemark: any
