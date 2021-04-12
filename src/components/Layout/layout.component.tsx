@@ -11,8 +11,8 @@ export interface LayoutProps {
 }
 
 const Layout = ({ location, title, children }: LayoutProps) => {
-  // const rootPath = `${__PATH_PREFIX__}/`
-  const rootPath = `/`
+  const rootPath = `${__PATH_PREFIX__}/`
+  // const rootPath = `/`
   const isRootPath = location?.pathname === rootPath
 
   return (
