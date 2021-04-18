@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import { DiscussionEmbed } from 'disqus-react';
+import { Disqus, CommentCount } from 'gatsby-plugin-disqus';
 
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
@@ -27,12 +27,7 @@ const BlogPostTemplate = ({ data, location }: Props) => {
     const post = data.markdownRemark;
     const siteTitle = data.site.siteMetadata?.title || `Title`;
     const { previous, next } = data;
-
-    const disqusConfig = {
-        shortname: process.env.GATSBY_DISQUS_NAME || '',
-        // config: { identifier: slug, title: siteTitle },
-        config: { identifier: siteTitle, title: siteTitle },
-    };
+    const disqusConfig = { identifier: post.fields.slug, title: siteTitle };
 
     return (
         <Layout location={location} title={siteTitle}>
@@ -41,10 +36,11 @@ const BlogPostTemplate = ({ data, location }: Props) => {
                 <header>
                     <h1 itemProp="headline">{post.frontmatter.title}</h1>
                     <p>{post.frontmatter.date}</p>
+                    <CommentCount config={disqusConfig} placeholder={'...'} />
                 </header>
                 <section dangerouslySetInnerHTML={{ __html: post.html }} itemProp="articleBody" />
                 <hr />
-                <DiscussionEmbed {...disqusConfig} />
+                <Disqus {...disqusConfig} />
                 <footer>
                     <Bio />
                 </footer>
@@ -96,6 +92,9 @@ export const pageQuery = graphql`
                 title
                 date(formatString: "MMMM DD, YYYY")
                 description
+            }
+            fields {
+                slug
             }
         }
         previous: markdownRemark(id: { eq: $previousPostId }) {

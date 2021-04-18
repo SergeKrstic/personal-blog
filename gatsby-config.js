@@ -13,6 +13,14 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-image`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-dark-mode`,
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `professional-blog`,
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
